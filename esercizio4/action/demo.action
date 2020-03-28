@@ -1,0 +1,12 @@
+#gol definition
+int32 start_pos
+int32 final_pos
+int32 vel
+int32 time
+---
+#result definition
+int32 end_pos
+---
+#feedback
+int32 current_pos
+int32 current_time
