@@ -4,6 +4,27 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="robot_kuka">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="10 0.6 0.02"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="yellow">
+        <color rgba="1 1 0 1"/>
+      </material>
+    </visual>
+  </link>
+  <joint name="joint0" type="prismatic">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <orient rpy="0 0 0"/>
+    <limit effort="176" lower="-5" upper="5" velocity="0.1">
+		</limit>
+    <dynamics damping="50" friction="1"/>
+  </joint>
   <link name="link1">
     <visual>
       <geometry>
@@ -15,14 +36,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
   <joint name="joint1" type="revolute">
     <parent link="link1"/>
@@ -45,14 +58,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
   <joint name="joint2" type="revolute">
     <parent link="link2"/>
@@ -75,14 +80,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
   <joint name="joint3" type="revolute">
     <parent link="link3"/>
@@ -105,14 +102,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
   <joint name="joint4" type="revolute">
     <parent link="link4"/>
@@ -135,14 +124,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
   <joint name="joint5" type="revolute">
     <parent link="link5"/>
@@ -165,14 +146,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
   <joint name="joint6" type="revolute">
     <parent link="link6"/>
@@ -195,14 +168,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
   <joint name="joint7" type="revolute">
     <parent link="link7"/>
@@ -225,14 +190,6 @@
       <origin xyz="0 0 0.1"/>
       <orient rpy="0 0 0"/>
     </visual>
-    <collision>
-      <geometry>
-        <cylinder length="0.2" radius="0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="0 0 1 1"/>
-      </material>
-    </collision>
   </link>
 </robot>
 

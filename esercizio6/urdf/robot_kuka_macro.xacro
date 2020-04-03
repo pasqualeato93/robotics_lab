@@ -1,6 +1,21 @@
 <?xml version="1.0"?>
   <robot name="robot_kuka_macro" xmlns:xacro="http://wiki.ros.org/xacro">
 
+	<xacro:macro name="base_link_macro" params="base_link_name">
+		<link name="${base_link_name}">
+			<visual>
+				<geometry>
+					<box size="10 0.6 0.02"/>
+				</geometry>
+				<origin rpy="0 0 0" xyz="0 0 0"/>
+					<material name="yellow">
+						<color rgba="1 1 0 1"/>
+					</material>
+			</visual>
+		
+		</link>
+	</xacro:macro>
+
 
 	<xacro:macro name="kuka_link" params="name *geometry *origin *orient  *material">
 		<link name="${name}">
@@ -12,10 +27,6 @@
 
 		  </visual>
 
-		  <collision>
-				<xacro:insert_block name="geometry" />
-				<xacro:insert_block name="origin" />		
-			</collision>
 
 	  </link>
 	</xacro:macro>	
